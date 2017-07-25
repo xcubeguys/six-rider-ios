@@ -1,0 +1,6 @@
+framework module Pods_Arcane_RiderTests {
+  umbrella header "Pods-Arcane RiderTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

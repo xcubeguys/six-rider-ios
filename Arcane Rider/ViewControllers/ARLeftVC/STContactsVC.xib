@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STContactsVC" customModule="Arcane_Rider" customModuleProvider="target">
+            <connections>
+                <outlet property="addBtn" destination="Gcy-J0-LKZ" id="nK4-gy-poO"/>
+                <outlet property="tableview" destination="XWw-Aw-Jdw" id="fkK-vf-0Vs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XWw-Aw-Jdw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Zxt-8P-RFW"/>
+                        <outlet property="delegate" destination="-1" id="Bb9-gj-Ta9"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcy-J0-LKZ">
+                    <rect key="frame" x="304" y="592" width="55" height="55"/>
+                    <color key="backgroundColor" red="0.20784313730000001" green="0.61960784310000006" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="Yy0-Mz-l8s"/>
+                        <constraint firstAttribute="width" constant="55" id="kiP-I5-XXR"/>
+                    </constraints>
+                    <state key="normal" image="ic_addpoll"/>
+                    <connections>
+                        <action selector="addButtonClicked:" destination="-1" eventType="touchUpInside" id="bqJ-Kd-II9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Gcy-J0-LKZ" secondAttribute="bottom" constant="20" id="4TF-fJ-rIH"/>
+                <constraint firstItem="XWw-Aw-Jdw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NmC-0s-pUV"/>
+                <constraint firstAttribute="trailing" secondItem="Gcy-J0-LKZ" secondAttribute="trailing" constant="16" id="WGb-87-Dmh"/>
+                <constraint firstAttribute="trailing" secondItem="XWw-Aw-Jdw" secondAttribute="trailing" id="khz-tE-xCO"/>
+                <constraint firstAttribute="bottom" secondItem="XWw-Aw-Jdw" secondAttribute="bottom" id="wA9-gB-Gbx"/>
+                <constraint firstItem="XWw-Aw-Jdw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zjK-yc-Fh8"/>
+            </constraints>
+            <point key="canvasLocation" x="-55" y="67"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_addpoll" width="32" height="32"/>
+    </resources>
+</document>

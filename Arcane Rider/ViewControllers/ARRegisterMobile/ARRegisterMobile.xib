@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARRegisterMobile" customModule="Arcane_Rider" customModuleProvider="target">
+            <connections>
+                <outlet property="activityView" destination="wk1-du-lJf" id="b7C-k7-ThY"/>
+                <outlet property="countryCode" destination="c64-eU-psA" id="Ie1-Re-hoF"/>
+                <outlet property="countrycodeLabel" destination="Tfg-BH-QaT" id="G2w-YO-ek3"/>
+                <outlet property="labelCcValue" destination="XqY-jf-bUp" id="CkJ-b0-Edm"/>
+                <outlet property="mobileText" destination="Tiq-09-9ox" id="G46-MX-4jX"/>
+                <outlet property="mobileerrLabel" destination="0Lz-iQ-PAB" id="EQG-oy-5gj"/>
+                <outlet property="nextBtn" destination="70Q-ow-Lj2" id="KZb-sF-kmR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tiq-09-9ox" customClass="HoshiTextField" customModule="Arcane_Rider" customModuleProvider="target">
+                    <rect key="frame" x="83" y="81" width="276" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="7L3-om-9uc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="FY0-Tf-Fdu"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your Mobile Number?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZg-aa-Psv">
+                    <rect key="frame" x="16" y="35" width="343" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="keK-ak-Jzo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70Q-ow-Lj2">
+                    <rect key="frame" x="314" y="182" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="QLa-be-R93"/>
+                        <constraint firstAttribute="width" constant="45" id="h4k-22-d7E"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="nextArrow.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="1x4-0s-lyW"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a valid mobile number with country code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lz-iQ-PAB">
+                    <rect key="frame" x="16" y="153" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="bBa-3v-C6C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Country code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfg-BH-QaT">
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="wk1-du-lJf">
+                    <rect key="frame" x="177.5" y="182" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="Kfa-Nh-elD"/>
+                        <constraint firstAttribute="height" constant="20" id="rtF-ji-rU9"/>
+                    </constraints>
+                    <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqY-jf-bUp">
+                    <rect key="frame" x="16" y="81" width="52" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="wVt-R0-3Pc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CC" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c64-eU-psA" customClass="HoshiTextField" customModule="Arcane_Rider" customModuleProvider="target">
+                    <rect key="frame" x="16" y="81" width="58" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="U5c-YM-eBR"/>
+                        <constraint firstAttribute="width" constant="58" id="san-Sq-FrC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="5lg-C3-vS7"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmT-FC-Laf">
+                    <rect key="frame" x="16" y="81" width="58" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="58" id="D93-GP-pkY"/>
+                        <constraint firstAttribute="height" constant="66" id="kmg-tB-bX9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <connections>
+                        <action selector="btnCountryPicker:" destination="-1" eventType="touchUpInside" id="jFR-hy-gM1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XZg-aa-Psv" secondAttribute="trailing" constant="16" id="1A4-5N-Dgt"/>
+                <constraint firstItem="Tiq-09-9ox" firstAttribute="leading" secondItem="kmT-FC-Laf" secondAttribute="trailing" constant="9" id="3P9-Vk-Bp8"/>
+                <constraint firstAttribute="trailing" secondItem="70Q-ow-Lj2" secondAttribute="trailing" constant="16" id="3Ya-54-cdH"/>
+                <constraint firstItem="XqY-jf-bUp" firstAttribute="top" secondItem="XZg-aa-Psv" secondAttribute="bottom" constant="8" id="5AT-0e-2ry"/>
+                <constraint firstItem="c64-eU-psA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="7dV-C3-37H"/>
+                <constraint firstItem="c64-eU-psA" firstAttribute="top" secondItem="XZg-aa-Psv" secondAttribute="bottom" constant="8" id="A8n-d2-qKs"/>
+                <constraint firstItem="Tiq-09-9ox" firstAttribute="leading" secondItem="c64-eU-psA" secondAttribute="trailing" constant="9" id="DEk-7O-Gna"/>
+                <constraint firstItem="70Q-ow-Lj2" firstAttribute="top" secondItem="0Lz-iQ-PAB" secondAttribute="bottom" constant="8" id="Ek5-2c-GZH"/>
+                <constraint firstAttribute="trailing" secondItem="Tiq-09-9ox" secondAttribute="trailing" constant="16" id="TNG-h8-r1Y"/>
+                <constraint firstItem="wk1-du-lJf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YOp-wW-Y6x"/>
+                <constraint firstItem="kmT-FC-Laf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="b4P-uK-SI0"/>
+                <constraint firstItem="Tiq-09-9ox" firstAttribute="leading" secondItem="XqY-jf-bUp" secondAttribute="trailing" constant="15" id="bkz-w0-tuQ"/>
+                <constraint firstItem="kmT-FC-Laf" firstAttribute="top" secondItem="XZg-aa-Psv" secondAttribute="bottom" constant="8" id="dii-gt-qht"/>
+                <constraint firstAttribute="trailing" secondItem="0Lz-iQ-PAB" secondAttribute="trailing" constant="16" id="egg-zo-iqt"/>
+                <constraint firstItem="Tiq-09-9ox" firstAttribute="top" secondItem="XZg-aa-Psv" secondAttribute="bottom" constant="8" id="fsg-60-VoD"/>
+                <constraint firstItem="XZg-aa-Psv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="hqP-fz-35x"/>
+                <constraint firstItem="wk1-du-lJf" firstAttribute="top" secondItem="0Lz-iQ-PAB" secondAttribute="bottom" constant="8" id="koE-8l-kdQ"/>
+                <constraint firstItem="XZg-aa-Psv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="lZ7-l0-qlq"/>
+                <constraint firstItem="0Lz-iQ-PAB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="moh-dy-kV1"/>
+                <constraint firstItem="Tiq-09-9ox" firstAttribute="leading" secondItem="kmT-FC-Laf" secondAttribute="trailing" constant="9" id="qot-hz-gKb"/>
+                <constraint firstItem="0Lz-iQ-PAB" firstAttribute="top" secondItem="kmT-FC-Laf" secondAttribute="bottom" constant="6" id="sFF-Mk-dXX"/>
+                <constraint firstItem="XqY-jf-bUp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="utZ-0T-Gg5"/>
+            </constraints>
+            <point key="canvasLocation" x="-280.5" y="25.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nextArrow.png" width="128" height="128"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module CreditCardForm {
+  umbrella header "CreditCardForm-umbrella.h"
+
+  export *
+  module * { export * }
+}

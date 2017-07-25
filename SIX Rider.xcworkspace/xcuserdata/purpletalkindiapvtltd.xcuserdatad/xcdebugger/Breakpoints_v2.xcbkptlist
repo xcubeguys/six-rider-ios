@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522138938.483092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "4974"
+            endingLineNumber = "4974"
+            landmarkName = "locateWithLongitude(_:andLatitude:andTitle:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Arcane_Rider.ARMainMapVC.locateWithLongitude (Swift.Double, andLatitude : Swift.Double, andTitle : Swift.String) -&gt; ()"
+                  moduleName = "Arcane Rider"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/purpletalkindiapvtltd/SIXDriver/Sixtnc_iOS/iosRider/Arcane%20Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+                  timestampString = "522662391.954824"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "4981"
+                  endingLineNumber = "4981"
+                  offsetFromSymbolStart = "728">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Arcane_Rider.ARMainMapVC.(locateWithLongitude (Swift.Double, andLatitude : Swift.Double, andTitle : Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "Arcane Rider"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/purpletalkindiapvtltd/SIXDriver/Sixtnc_iOS/iosRider/Arcane%20Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+                  timestampString = "522662391.957726"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "4981"
+                  endingLineNumber = "4981"
+                  offsetFromSymbolStart = "9672">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522138938.483092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5077"
+            endingLineNumber = "5077"
+            landmarkName = "requesting()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522138938.483092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5087"
+            endingLineNumber = "5087"
+            landmarkName = "requesting()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522650940.812055"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5648"
+            endingLineNumber = "5648"
+            landmarkName = "processURL()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522138938.483092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3623"
+            endingLineNumber = "3623"
+            landmarkName = "callCarListCategoryValues()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522650940.812055"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7192"
+            endingLineNumber = "7192"
+            landmarkName = "callCancelTrip()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522650940.812055"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7287"
+            endingLineNumber = "7287"
+            landmarkName = "callCancelTrip()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Arcane_Rider.ARMainMapVC.callCancelTrip () -&gt; ()"
+                  moduleName = "Arcane Rider"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/purpletalkindiapvtltd/SIXDriver/Sixtnc_iOS/iosRider/Arcane%20Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+                  timestampString = "522662391.995204"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7288"
+                  endingLineNumber = "7288"
+                  offsetFromSymbolStart = "8804">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of Arcane_Rider.ARMainMapVC.(callCancelTrip () -&gt; ()).(closure #1)"
+                  moduleName = "Arcane Rider"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/purpletalkindiapvtltd/SIXDriver/Sixtnc_iOS/iosRider/Arcane%20Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+                  timestampString = "522662391.997441"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7288"
+                  endingLineNumber = "7288"
+                  offsetFromSymbolStart = "3248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522650940.812055"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7293"
+            endingLineNumber = "7293"
+            landmarkName = "tripStatusUpdating(urlString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522650940.812055"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7304"
+            endingLineNumber = "7304"
+            landmarkName = "tripStatusUpdating(urlString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522650940.812055"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7296"
+            endingLineNumber = "7296"
+            landmarkName = "tripStatusUpdating(urlString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522650940.812055"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7303"
+            endingLineNumber = "7303"
+            landmarkName = "tripStatusUpdating(urlString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arcane Rider/ViewControllers/ARLeftVC/ARMainMapVC.swift"
+            timestampString = "522659573.462879"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5490"
+            endingLineNumber = "5490"
+            landmarkName = "checkLoop()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

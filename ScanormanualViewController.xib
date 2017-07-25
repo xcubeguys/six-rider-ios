@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanormanualViewController" customModule="Arcane_Rider" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u28-X5-RLa">
+                    <rect key="frame" x="198" y="27" width="161" height="113"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="161" id="OjP-hN-RNn"/>
+                        <constraint firstAttribute="height" constant="113" id="Yg7-8H-p1Q"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="ic_cardio.png"/>
+                    <connections>
+                        <action selector="cardioact:" destination="-1" eventType="touchUpInside" id="W37-1M-ISR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrg-tG-j4P">
+                    <rect key="frame" x="16" y="27" width="161" height="113"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="161" id="HE5-vH-mSX"/>
+                        <constraint firstAttribute="height" constant="113" id="sJ2-1V-1Ml"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="ic_stripe_logo.png"/>
+                    <connections>
+                        <action selector="stripact:" destination="-1" eventType="touchUpInside" id="dPA-fT-H0t"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zrg-tG-j4P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="6Zk-Fu-Gcu"/>
+                <constraint firstItem="u28-X5-RLa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="hP1-kW-pJ3"/>
+                <constraint firstAttribute="trailing" secondItem="u28-X5-RLa" secondAttribute="trailing" constant="16" id="hu0-mm-nT2"/>
+                <constraint firstItem="zrg-tG-j4P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="pCc-gY-imh"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="98.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_cardio.png" width="176" height="115"/>
+        <image name="ic_stripe_logo.png" width="128" height="128"/>
+    </resources>
+</document>

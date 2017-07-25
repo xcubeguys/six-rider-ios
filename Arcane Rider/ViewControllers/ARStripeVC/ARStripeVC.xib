@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARStripeVC" customModule="Arcane_Rider" customModuleProvider="target">
+            <connections>
+                <outlet property="activityView" destination="kpc-yT-sLa" id="fwn-En-Cb1"/>
+                <outlet property="creditCardView" destination="iyX-Qw-qoj" id="XAE-UG-Iu1"/>
+                <outlet property="labelNotValid" destination="off-TH-LdF" id="kSv-7T-JcV"/>
+                <outlet property="submitButton" destination="wg5-C6-g8V" id="gUo-zA-p5B"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyX-Qw-qoj" customClass="CreditCardFormView" customModule="CreditCardForm">
+                    <rect key="frame" x="37.5" y="25" width="300" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="NGw-GC-zpq"/>
+                        <constraint firstAttribute="width" constant="300" id="V14-rO-eRC"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg5-C6-g8V">
+                    <rect key="frame" x="0.0" y="384" width="375" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="6tm-4g-N32"/>
+                    </constraints>
+                    <state key="normal" title="PAY">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="submitBTN:" destination="-1" eventType="touchUpInside" id="ov7-eW-Zkj"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jx4-lU-3G8">
+                    <rect key="frame" x="0.0" y="332" width="375" height="5"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="X9V-bf-6jr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-yT-sLa">
+                    <rect key="frame" x="326" y="393" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="Mpu-n6-IDH"/>
+                        <constraint firstAttribute="height" constant="20" id="Olz-9z-7fx"/>
+                    </constraints>
+                    <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a Valid Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="off-TH-LdF">
+                    <rect key="frame" x="0.0" y="2" width="375" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="OjR-Sd-Eej"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.95686274510000002" green="0.12549019610000001" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="off-TH-LdF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="04x-uQ-Ai2"/>
+                <constraint firstItem="wg5-C6-g8V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2gN-wd-k3V"/>
+                <constraint firstAttribute="trailing" secondItem="kpc-yT-sLa" secondAttribute="trailing" constant="29" id="9FK-6L-xId"/>
+                <constraint firstItem="iyX-Qw-qoj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="CLH-hk-cjF"/>
+                <constraint firstItem="Jx4-lU-3G8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ird-Mv-3q5"/>
+                <constraint firstItem="kpc-yT-sLa" firstAttribute="top" secondItem="Jx4-lU-3G8" secondAttribute="bottom" constant="56" id="LaD-pB-nXa"/>
+                <constraint firstItem="iyX-Qw-qoj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P8U-zS-4gq"/>
+                <constraint firstAttribute="trailing" secondItem="wg5-C6-g8V" secondAttribute="trailing" id="PdP-0t-f7F"/>
+                <constraint firstAttribute="trailing" secondItem="off-TH-LdF" secondAttribute="trailing" id="QCo-UD-dfh"/>
+                <constraint firstItem="off-TH-LdF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="2" id="RiL-BN-pBM"/>
+                <constraint firstItem="wg5-C6-g8V" firstAttribute="top" secondItem="Jx4-lU-3G8" secondAttribute="bottom" constant="47" id="UFX-Um-Z53"/>
+                <constraint firstItem="Jx4-lU-3G8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="1" id="bjY-5p-Q5s"/>
+                <constraint firstAttribute="trailing" secondItem="Jx4-lU-3G8" secondAttribute="trailing" id="geZ-05-rxI"/>
+                <constraint firstItem="Jx4-lU-3G8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mNs-jy-dIK"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+</document>
