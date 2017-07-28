@@ -37,27 +37,21 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>2</string>
-	<key>Fabric</key>
-	<dict>
-		<key>APIKey</key>
-		<string>c318f7efab8b3f74809783c46a9104fff0439e83</string>
-		<key>Kits</key>
-		<array>
-			<dict>
-				<key>KitInfo</key>
-				<dict/>
-				<key>KitName</key>
-				<string>STPAPIClient</string>
-			</dict>
-			<dict>
-				<key>KitInfo</key>
-				<dict/>
-				<key>KitName</key>
-				<string>Crashlytics</string>
-			</dict>
-		</array>
-	</dict>
-	<key>FacebookAppID</key>
+    <key>Fabric</key>
+    <dict>
+        <key>APIKey</key>
+        <string>31db30241e4c5f2cac5966a8939f8a0a15f9d3c7</string>
+        <key>Kits</key>
+        <array>
+            <dict>
+                <key>KitInfo</key>
+                <dict/>
+                <key>KitName</key>
+                <string>Crashlytics</string>
+            </dict>
+        </array>
+    </dict>
+    <key>FacebookAppID</key>
 	<string>319497751803903</string>
 	<key>FacebookDisplayName</key>
 	<string>Arcane Lite Rider</string>

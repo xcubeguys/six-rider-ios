@@ -225,8 +225,20 @@ class ARMainYourTripsVC: UIViewController,UITableViewDelegate,UITableViewDataSou
         print("mouni\(timeFormat1)")
 
         let carType:NSString! = arrayCarType.object(at: indexPath.row) as! NSString
-        
-        let priceValue : Double = arrayOfPrice.object(at: indexPath.row) as! Double
+       
+        var priceStr = ""
+            
+        if  let doubleVal = arrayOfPrice.object(at: indexPath.row) as? Double
+        {
+            priceStr = "\(doubleVal)"
+        }
+        else if let floatVal = arrayOfPrice.object(at: indexPath.row) as? Float {
+            priceStr = "\(floatVal)"
+        }
+        else if let intVal = arrayOfPrice.object(at: indexPath.row) as? Int {
+            priceStr = "\(intVal)"
+            }
+    
         
         if tripId == nil || tripId == ""{
             
@@ -236,13 +248,14 @@ class ARMainYourTripsVC: UIViewController,UITableViewDelegate,UITableViewDataSou
             
             self.passTripId = "\(tripId!)"
         }
-        if priceValue == 0{
+            
+        if Int(priceStr) == 0{
             
             cell.labelAmount.text = "$0"
         }
         else{
             
-            cell.labelAmount.text = "$\(priceValue)"
+            cell.labelAmount.text = "$\(priceStr)"
 
         }
         

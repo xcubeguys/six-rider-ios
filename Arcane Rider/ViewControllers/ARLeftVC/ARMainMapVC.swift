@@ -690,6 +690,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
         self.viewRideShareNumbers.layer.shadowOpacity = 1.0
         self.viewRideShareNumbers.layer.shadowRadius = 1.0
         self.viewRideShareNumbers.layer.shadowOffset = CGSize(width: 0, height: 3)
+        //To be removed when share ride is enabled
+        self.viewRideShareNumbers.isHidden = true
 
         
         self.buttonTopNewPickUp.backgroundColor = UIColor.white
@@ -1737,6 +1739,12 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
             self.viewCarCategory.isHidden = true
             self.btnNewRequest.isHidden = true
             
+            let pickUp = self.labelTopPickup.text!
+            let drop = self.labelTopDrop.text!
+
+            self.labelTopFarePickUp.text = pickUp
+            self.labelTopFareDrop.text = drop
+
             let catCategory = self.carCategoryPass
             
             if catCategory == ""{
@@ -1748,6 +1756,9 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                 self.carCategoryPass = catCategory
             }
             
+            self.labelTopFareCar.text = self.carCategoryPass
+            self.labelTopFareDollar.text = "..."
+            
             print("car fare /\(self.carCategoryPass)")
             
             let catIndex:Int = self.arrayOfCarCategory.index(of: self.carCategoryPass)
@@ -1755,10 +1766,6 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
             
             carCatId = self.arrayOfCarCategoryIds.object(at: catIndex) as! NSString
             
-            print(self.appDelegate.pickupLocation.coordinate.latitude)
-            print(self.appDelegate.pickupLocation.coordinate.longitude)
-            print(self.appDelegate.dropLocation.coordinate.latitude)
-            print(self.appDelegate.dropLocation.coordinate.longitude)
             
             var urlstring:String = "\(live_request_url)requests/estFareCalc/start_lat/\(self.appDelegate.pickupLocation.coordinate.latitude)/start_long/\(self.appDelegate.pickupLocation.coordinate.longitude)/end_lat/\(self.appDelegate.dropLocation.coordinate.latitude)/end_long/\(self.appDelegate.dropLocation.coordinate.longitude)/category_id/\(carCatId)"
             
@@ -1777,12 +1784,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                     
                     if let estFare:NSDictionary = value["est_fare"] as? NSDictionary{
                         if let estCost:Float = estFare["est_cost"] as? Float{
-                        let pickUp = self.labelTopPickup.text!
-                        let drop = self.labelTopDrop.text!
-                        self.labelTopFarePickUp.text = pickUp
-                        self.labelTopFareDrop.text = drop
-                        self.labelTopFareCar.text = self.carCategoryPass
                         self.labelTopFareDollar.text = "$\(estCost)"
+                            
                         }
                     }
                 }
@@ -4122,10 +4125,10 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
     }
     @IBAction func btnDropUpdateTop(_ sender: Any) {
 
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let subContentsVC = storyboard.instantiateViewController(withIdentifier: "multidest") as! MultipleDestinationVC
-        self.navigationController?.pushViewController(subContentsVC, animated: true)
+        //Uncomment it when we need to add multiple drop locations
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let subContentsVC = storyboard.instantiateViewController(withIdentifier: "multidest") as! MultipleDestinationVC
+//        self.navigationController?.pushViewController(subContentsVC, animated: true)
 
         
     }
@@ -4184,7 +4187,7 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
             warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
             SwiftMessages.show(config: warningConfig, view: warning)
         }
-        else if self.countryStatic != self.dropCountry {
+        else if false{//self.countryStatic != self.dropCountry {
             
             self.buttonTopPickUp.isEnabled = true
             self.buttonTopDrop.isEnabled = true
@@ -4218,7 +4221,7 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
             riderAlertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
             
             // show the alert
-            riderAlertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.destructive, handler: { action in
+            riderAlertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: { action in
                 
                 self.req = "yes"
                 self.buttonTopPickUp.isEnabled = false
@@ -4692,7 +4695,9 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                 self.buttonTopNewPickUp.isHidden = true
                 self.viewRequest.isHidden = false
                 self.viewPay.isHidden = false
-                self.viewRideShareNumbers.isHidden = false
+                
+                //To be changed to false when share ride is enabled
+                self.viewRideShareNumbers.isHidden = true
 
             }
             else{
@@ -4832,7 +4837,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                     self.buttonTopNewPickUp.isHidden = true
                     self.viewRequest.isHidden = false
                     self.viewPay.isHidden = false
-                    self.viewRideShareNumbers.isHidden = false
+                    //To be changed to false when share ride is enabled
+                    self.viewRideShareNumbers.isHidden = true
 
                 }
 
@@ -4879,7 +4885,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                 self.btnNewTopBack.isHidden = false
                 self.buttonTopNewPickUp.isHidden = true
                 self.viewPay.isHidden = false
-                self.viewRideShareNumbers.isHidden = false
+                //To be changed to false when share ride is enabled
+                self.viewRideShareNumbers.isHidden = true
 
                 if self.riderClickedfareEstimate == "click"{
                     
@@ -5193,6 +5200,11 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                     }
                     
                     self.appDelegate.request_id = value["request_id"] as! String
+                    
+                    if let estFare = value["est_fare"] as? Double {
+                        self.estimatedfare = estFare
+
+                    }
                     self.appDelegate.request_status = value["request_status"] as! String
                     print("Requesting")
                     
@@ -7427,6 +7439,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                 self.tripIsStarted = "yes"
                 self.viewTopPickup.isHidden = true
                 self.viewUpdateDrop.isHidden = false
+                self.labelToUpdatepDrop.text = self.dropAddress
+
                 self.waypointmerge = ""
                 self.waypointmerge1 = ""
                 self.autoUpdateforLocation()
@@ -7967,6 +7981,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                     self.viewCurrentTrip.isHidden = true
                     self.viewBlurCurrentTrip.isHidden = true
                     self.viewUpdateDrop.isHidden = false
+                    self.labelToUpdatepDrop.text = self.dropAddress
+
                     self.waypointmerge = ""
                     self.waypointmerge1 = ""
                     self.autoUpdateforLocation()
@@ -8320,7 +8336,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
         
         self.viewTopDrop.isHidden = false
         self.viewPay.isHidden = false
-        self.viewRideShareNumbers.isHidden = false
+        //To be changed to false when share ride is enabled
+        self.viewRideShareNumbers.isHidden = true
         self.viewRequest.isHidden = false
         self.labelTopPickupCentre.isHidden = false
         self.btnNewTopBack.isHidden = false
@@ -8440,7 +8457,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                         self.buttonTopNewPickUp.isHidden = true
                         self.viewRequest.isHidden = false
                         self.viewPay.isHidden = false
-                        self.viewRideShareNumbers.isHidden = false
+                        //To be changed to false when share ride is enabled
+                        self.viewRideShareNumbers.isHidden = true
                         self.labelTopPickupCentre.isHidden = false
                         
                     }
@@ -8517,7 +8535,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                     self.buttonTopNewPickUp.isHidden = true
                     self.viewRequest.isHidden = false
                     self.viewPay.isHidden = false
-                    self.viewRideShareNumbers.isHidden = false
+                    //To be changed to false when share ride is enabled
+                    self.viewRideShareNumbers.isHidden = true
                     self.labelTopPickupCentre.isHidden = false
                     
                 }
@@ -8585,7 +8604,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                     
                     self.viewRequest.isHidden = false
                     self.viewPay.isHidden = false
-                    self.viewRideShareNumbers.isHidden = false
+                    //To be changed to false when share ride is enabled
+                    self.viewRideShareNumbers.isHidden = true
                     self.labelTopPickupCentre.isHidden = false
                     //self.etaCalc(orignlat: "\(location?.coordinate.latitude)", originLon: "\(location?.coordinate.longitude)")
                 }
@@ -8710,7 +8730,8 @@ class ARMainMapVC: UIViewController,UISearchBarDelegate , LocateOnTheMap,GMSAuto
                         self.buttonTopNewPickUp.isHidden = true
                         self.viewRequest.isHidden = false
                         self.viewPay.isHidden = false
-                        self.viewRideShareNumbers.isHidden = false
+                        //To be changed to false when share ride is enabled
+                        self.viewRideShareNumbers.isHidden = true
                         self.labelTopPickupCentre.isHidden = false
 
                     }

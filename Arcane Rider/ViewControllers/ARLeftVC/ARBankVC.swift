@@ -220,7 +220,7 @@ class ARBankVC: UIViewController,UITextFieldDelegate,UIScrollViewDelegate {
 //            
 //        }
 //        }
-        let alert = UIAlertController(title: "Message ", message: "Would you like to continue learning how to use iOS alerts?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Message ", message: "You didn't submit any details", preferredStyle: UIAlertControllerStyle.alert)
         
         // add the actions (buttons)
         //alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))

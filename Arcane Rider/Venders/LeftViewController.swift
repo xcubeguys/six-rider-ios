@@ -15,7 +15,7 @@ enum LeftMenu: Int {
     case swift
     case wallet
     case SoS
-    case rideLater
+//    case rideLater
     case bankdetails
     case feedback
     case java
@@ -29,7 +29,7 @@ protocol LeftMenuProtocol : class {
 class LeftViewController : UIViewController, LeftMenuProtocol,MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["Your Trips","Settings","Wallet","SoS","Ride Later","Bank Details","Feedback","Log Out"]
+    var menus = ["Your Trips","Settings","Wallet","SoS","Bank Details","Feedback","Log Out"] //"Ride Later" add it after enabling ride later
     var mainViewController: UIViewController!
     var swiftViewController: UIViewController!
     var javaViewController: UIViewController!
@@ -177,12 +177,12 @@ class LeftViewController : UIViewController, LeftMenuProtocol,MFMailComposeViewC
             
             break
         
-        case .rideLater:
-            
-            self.slideMenuController()?.changeMainViewController(self.riderLaterViewController, close: true)
-            
-            
-            break
+//        case .rideLater:
+//            
+//            self.slideMenuController()?.changeMainViewController(self.riderLaterViewController, close: true)
+//            
+//            
+//            break
             
         case .java:
             
@@ -320,7 +320,7 @@ extension LeftViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let menu = LeftMenu(rawValue: indexPath.row) {
             switch menu {
-            case .main, .swift,.wallet,  .SoS, .rideLater, .bankdetails, .feedback, .java:
+            case .main, .swift,.wallet,  .SoS, .bankdetails, .feedback, .java:
                 
                 return BaseTableViewCell.height()
             }
@@ -360,7 +360,7 @@ extension LeftViewController : UITableViewDataSource {
             
             switch menu {
                 
-            case .main, .swift,.wallet,  .SoS, .rideLater, .bankdetails, .feedback, .java:
+            case .main, .swift,.wallet,  .SoS, .bankdetails, .feedback, .java:
                 let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
                 cell.setData(menus[indexPath.row])
                 return cell
